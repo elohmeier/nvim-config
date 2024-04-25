@@ -7,6 +7,7 @@ return {
 		},
 	},
 	{
+        -- TODO: remove this for neovim 0.10, see https://github.com/neovim/neovim/pull/28176 (native comment support)
 		"echasnovski/mini.comment",
 		event = "VeryLazy",
 		opts = {
