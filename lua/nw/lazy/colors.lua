@@ -35,7 +35,8 @@ return {
 		config = function()
 			require("rose-pine").setup({
 				styles = {
-					transparency = true,
+					disable_background = true,
+					italic = false,
 				},
 			})
 
