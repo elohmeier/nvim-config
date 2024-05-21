@@ -64,7 +64,6 @@ vim.api.nvim_set_keymap("i", "<M-u>U", "Ü", { noremap = true, silent = true })
 -- Option + s insert ß (like in macOS)
 vim.api.nvim_set_keymap("i", "<M-s>", "ß", { noremap = true, silent = true })
 
-
 -- Jump to LSP error
 vim.keymap.set("n", "<C-j>", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<C-k>", vim.diagnostic.goto_prev)
