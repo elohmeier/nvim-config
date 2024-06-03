@@ -59,6 +59,8 @@ return {
 			},
 		})
 
+		require("lspconfig").nil_ls.setup({})
+
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		cmp.setup({
