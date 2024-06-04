@@ -67,3 +67,6 @@ vim.api.nvim_set_keymap("i", "<M-s>", "ß", { noremap = true, silent = true })
 -- Jump to LSP error
 vim.keymap.set("n", "<C-j>", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<C-k>", vim.diagnostic.goto_prev)
+
+-- Ctrl + a in command mode to go to the beginning of the line
+vim.api.nvim_set_keymap("c", "<C-a>", "<C-b>", { noremap = true, silent = false })
