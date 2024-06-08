@@ -20,6 +20,7 @@ return {
 			lua = { "stylua" },
 			python = { "ruff_format" },
 			nix = { "nixpkgs_fmt" },
+			xml = { "xmllint" },
 		},
 		-- Set up format-on-save
 		format_on_save = { timeout_ms = 500, lsp_fallback = true },
