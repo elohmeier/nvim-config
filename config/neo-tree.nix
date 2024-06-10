@@ -7,7 +7,11 @@
     {
       mode = "n";
       key = "<leader>fe";
-      action = ":Neotree toggle<CR>";
+      action.__raw = ''
+        function()
+          require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+        end
+      '';
       options = {
         silent = true;
         desc = "Explorer NeoTree (cwd)";
