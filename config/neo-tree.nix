@@ -1,6 +1,14 @@
 {
   plugins.neo-tree = {
     enable = true;
+
+    extraSources = [ "document_symbols" ];
+
+    filesystem = {
+      bindToCwd = false;
+      followCurrentFile.enabled = true;
+      useLibuvFileWatcher = true;
+    };
   };
 
   keymaps = [
