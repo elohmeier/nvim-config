@@ -8,7 +8,11 @@
       nil-ls.enable = true;
       pyright.enable = true;
       ruff-lsp.enable = true;
-      rust-analyzer.enable = true;
+      rust-analyzer = {
+        enable = true;
+        installCargo = false;
+        installRustc = false;
+      };
       svelte.enable = true;
       tailwindcss.enable = true;
       tsserver.enable = true;
