@@ -103,18 +103,6 @@
       options = { noremap = true; silent = true; };
     }
 
-    # Jump to LSP error
-    {
-      mode = "n";
-      key = "<C-j>";
-      action = "vim.diagnostic.goto_next";
-    }
-    {
-      mode = "n";
-      key = "<C-k>";
-      action = "vim.diagnostic.goto_prev";
-    }
-
     # Ctrl + a in command mode to go to the beginning of the line
     {
       mode = "c";

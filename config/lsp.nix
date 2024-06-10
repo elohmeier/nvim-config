@@ -13,5 +13,27 @@
       tailwindcss.enable = true;
       tsserver.enable = true;
     };
+
+    keymaps = {
+      silent = true;
+
+      lspBuf = {
+        "<leader>vrn" = {
+          action = "rename";
+          desc = "Rename";
+        };
+      };
+
+      diagnostic = {
+        "<C-j>" = {
+          action = "goto_next";
+          desc = "Next Diagnostic";
+        };
+        "<C-k>" = {
+          action = "goto_prev";
+          desc = "Previous Diagnostic";
+        };
+      };
+    };
   };
 }
