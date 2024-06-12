@@ -35,8 +35,8 @@
         sources = {
           __raw = ''
             cmp.config.sources({
-              {name = 'nvim_lsp'},
               {name = 'copilot'},
+              {name = 'nvim_lsp'},
               {name = 'path'},
               {name = 'luasnip'},
               {name = 'cmdline'},
