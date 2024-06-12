@@ -27,14 +27,13 @@
       url = "github:hercules-ci/gitignore.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.follows = "nixvim/nixpkgs";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.devshell.follows = "devshell";
       inputs.flake-compat.follows = "flake-compat";
       inputs.flake-parts.follows = "flake-parts";
       inputs.git-hooks.follows = "git-hooks";
-      inputs.nixpkgs.follows = "nixpkgs";
       inputs.treefmt-nix.follows = "treefmt-nix";
     };
     treefmt-nix = {
