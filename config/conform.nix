@@ -3,9 +3,10 @@
     enable = true;
 
     formattersByFt = {
+      json = [ "prettier" ];
       lua = [ "stylua" ];
-      python = [ "ruff_format" ];
       nix = [ "nixpkgs_fmt" ];
+      python = [ "ruff_format" ];
       xml = [ "xmllint" ];
     };
 
