@@ -3,6 +3,7 @@
     enable = true;
 
     formattersByFt = {
+      htmldjango = [ "djlint" ];
       json = [ "prettier" ];
       lua = [ "stylua" ];
       nix = [ "nixpkgs_fmt" ];
