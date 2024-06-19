@@ -11,6 +11,7 @@
     ./neogit.nix
     ./notify.nix
     ./remap.nix
+    ./resession.nix
     ./set.nix
     ./telescope.nix
     ./treesitter.nix
