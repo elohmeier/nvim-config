@@ -4,6 +4,7 @@
     ./colors.nix
     ./conform.nix
     ./copilot.nix
+    ./dap.nix
     ./lsp.nix
     ./luasnip.nix
     ./mini.nix
