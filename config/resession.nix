@@ -44,7 +44,10 @@
   extraConfigLua =
     let
       options = {
-        autosave.enabled = true;
+        autosave = {
+          enabled = true;
+          notify = false;
+        };
       };
     in
     ''
