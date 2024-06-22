@@ -28,16 +28,26 @@
         };
       };
 
-      diagnostic = {
-        "<C-j>" = {
-          action = "goto_next";
-          desc = "Next Diagnostic";
-        };
-        "<C-k>" = {
-          action = "goto_prev";
-          desc = "Previous Diagnostic";
-        };
-      };
+      extra = [
+        {
+          action.__raw = "function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+          key = "<C-j>";
+          mode = "n";
+          options = {
+            desc = "Next Diagnostic";
+            silent = true;
+          };
+        }
+        {
+          action.__raw = "function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+          key = "<C-k>";
+          mode = "n";
+          options = {
+            desc = "Previous Diagnostic";
+            silent = true;
+          };
+        }
+      ];
     };
   };
 }
