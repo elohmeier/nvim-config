@@ -138,6 +138,15 @@
 
     {
       mode = "n";
+      key = "<leader>fs";
+      action = "<cmd>Telescope lsp_document_symbols<CR>";
+      options = {
+        desc = "Document symbols";
+      };
+    }
+
+    {
+      mode = "n";
       key = "<leader>sd";
       action = "<cmd>Telescope diagnostics bufnr=0<cr>";
       options = {
