@@ -5,6 +5,7 @@
     ./conform.nix
     ./copilot.nix
     ./dap.nix
+    ./gitsigns.nix
     ./lsp.nix
     ./luasnip.nix
     ./mini.nix
