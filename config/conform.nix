@@ -8,6 +8,8 @@
       lua = [ "stylua" ];
       nix = [ "nixpkgs_fmt" ];
       python = [ "ruff_format" ];
+      svelte = [ "prettier" ];
+      typescript = [ "prettier" ];
       xml = [ "xmllint" ];
     };
 
