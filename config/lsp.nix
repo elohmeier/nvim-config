@@ -3,6 +3,7 @@
     enable = true;
 
     servers = {
+      bashls.enable = true;
       gopls.enable = true;
       lua-ls.enable = true;
       nil-ls.enable = true;
