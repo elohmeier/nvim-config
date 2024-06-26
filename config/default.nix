@@ -17,5 +17,6 @@
     ./set.nix
     ./telescope.nix
     ./treesitter.nix
+    ./trouble.nix
   ];
 }
