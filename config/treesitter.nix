@@ -18,7 +18,23 @@
 
   plugins.treesitter-context = {
     enable = true;
+    settings = {
+      max_lines = 0;
+      multiline_threshold = 1;
+    };
   };
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "[c";
+      action = "<cmd>lua require('treesitter-context').go_to_context(vim.v.count1)<cr>";
+      options = {
+        silent = true;
+        desc = "Jump to context start";
+      };
+    }
+  ];
 
   plugins.treesitter-textobjects = {
     enable = false;
