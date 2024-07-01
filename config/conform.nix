@@ -14,7 +14,7 @@
     };
 
     formatters = {
-      shfmt.prepend_args = [ "-i" "2" ];
+      shfmt.prepend_args = [ "-i" "4" ];
     };
   };
 
