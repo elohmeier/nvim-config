@@ -5,6 +5,7 @@
     servers = {
       bashls.enable = true;
       gopls.enable = true;
+      jsonnet-ls.enable = true;
       lua-ls.enable = true;
       nil-ls.enable = true;
       pyright.enable = true;
