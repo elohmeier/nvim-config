@@ -8,7 +8,13 @@
       in
       {
         nixvim-full = nixvim'.makeNixvimWithModule {
-          module = import ../../config;
+          module = import ../../config { };
+        };
+
+        nixvim-minimal = nixvim'.makeNixvimWithModule {
+          module = import ../../config {
+            minimal = true;
+          };
         };
       };
   };
