@@ -5,6 +5,7 @@
     formattersByFt = {
       htmldjango = [ "djlint" ];
       json = [ "prettier" ];
+      jsonnet = [ "jsonnetfmt" ];
       lua = [ "stylua" ];
       nix = [ "nixpkgs_fmt" ];
       python = [ "ruff_format" ];
