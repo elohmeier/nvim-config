@@ -1,5 +1,6 @@
 { minimal ? false }: {
   imports = [
+    ./attempt.nix
     ./colors.nix
     ./luasnip.nix
     ./mini.nix
