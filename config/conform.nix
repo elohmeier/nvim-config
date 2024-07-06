@@ -10,6 +10,7 @@
       nix = [ "nixpkgs_fmt" ];
       python = [ "ruff_format" ];
       svelte = [ "prettier" ];
+      toml = [ "taplo" ];
       typescript = [ "prettier" ];
       xml = [ "xmllint" ];
     };
