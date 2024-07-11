@@ -17,6 +17,7 @@
     ./lsp.nix
     ./neo-tree.nix
     ./neogit.nix
+    ./plantuml.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
