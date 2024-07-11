@@ -1,19 +1,41 @@
+{ pkgs, ... }:
+
 {
   plugins.treesitter = {
     enable = true;
-    indent = true;
-    nixvimInjections = true;
-    ensureInstalled = [
-      "bash"
-      "c"
-      "javascript"
-      "jsdoc"
-      "lua"
-      "python"
-      "rust"
-      "typescript"
-      "vimdoc"
+
+    grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      bash
+      c
+      git_config
+      git_rebase
+      gitattributes
+      gitcommit
+      gitignore
+      javascript
+      jsdoc
+      json
+      jsonc
+      lua
+      make
+      markdown
+      nix
+      python
+      readline
+      regex
+      rust
+      ssh-config
+      toml
+      typescript
+      vim
+      vimdoc
+      xml
+      yaml
     ];
+
+    settings = {
+      indent.enable = true;
+    };
   };
 
   plugins.treesitter-context = {
