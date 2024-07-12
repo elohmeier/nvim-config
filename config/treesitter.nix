@@ -16,6 +16,7 @@
       jsdoc
       json
       jsonc
+      jsonnet
       lua
       make
       markdown
