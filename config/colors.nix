@@ -1,18 +1,22 @@
 {
   colorschemes = {
-    rose-pine = {
+    # rose-pine = {
+    #   enable = true;
+    #   settings = {
+    #     styles = {
+    #       disable_background = true;
+    #       italic = false;
+    #     };
+    #   };
+    # };
+
+    tokyonight = {
       enable = true;
-      settings = {
-        styles = {
-          disable_background = true;
-          italic = false;
-        };
-      };
     };
   };
 
-  highlightOverride = {
-    Normal.bg = "none";
-    NormalFloat.bg = "none";
-  };
+  # highlightOverride = {
+  #   Normal.bg = "none";
+  #   NormalFloat.bg = "none";
+  # };
 }
