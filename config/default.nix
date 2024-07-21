@@ -19,6 +19,7 @@
     ./neogit.nix
     ./plantuml.nix
     ./spectre.nix
+    ./ssr.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
