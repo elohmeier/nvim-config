@@ -18,6 +18,7 @@
     ./neo-tree.nix
     ./neogit.nix
     ./plantuml.nix
+    ./spectre.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
