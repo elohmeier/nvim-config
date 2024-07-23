@@ -1,14 +1,6 @@
 { helpers, pkgs, ... }: {
   extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "resession.nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "stevearc";
-        repo = "resession.nvim";
-        rev = "v1.2.1";
-        hash = "sha256-GXKDuKDMcfl1SHTTdUFdWuWbtq6TDtk0GsyI3fAc1vE=";
-      };
-    })
+    pkgs.resession-nvim
   ];
 
   keymaps = [
