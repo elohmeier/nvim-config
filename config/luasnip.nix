@@ -9,6 +9,9 @@
       enable_autosnippets = true;
       store_selection_keys = "<Tab>";
     };
+    fromVscode = [
+      { lazyLoad = true; paths = ../snippets; }
+    ];
   };
 
   plugins.friendly-snippets.enable = true;
