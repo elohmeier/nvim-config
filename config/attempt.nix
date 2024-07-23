@@ -38,7 +38,7 @@
 
     {
       mode = "n";
-      key = "<leader>al";
+      key = "<leader>fa";
       action = "<cmd>Telescope attempt<cr>";
       options = {
         desc = "Attempts";
