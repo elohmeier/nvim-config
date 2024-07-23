@@ -2,7 +2,7 @@
 
 {
   flake.overlays = {
-    default = final: prev:
+    default = final: _prev:
       let
         nixvim' = inputs.nixvim.legacyPackages.${final.system};
       in
