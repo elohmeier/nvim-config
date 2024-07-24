@@ -1,12 +1,71 @@
 { pkgs, ... }: {
   plugins.spectre = {
     enable = true;
-    findPackage = pkgs.ripgrep;
-    replacePackage = pkgs.gnused;
 
-    settings.default = {
-      find.cmd = "rg";
-      replace.cmd = "sed";
+    settings = {
+      live_update = true;
+      is_insert_mode = true;
+      find_engine = {
+        rg = {
+          cmd = "rg";
+          args = [
+            "--color=never"
+            "--no-heading"
+            "--with-filename"
+            "--line-number"
+            "--column"
+          ];
+          options = {
+            ignore-case = {
+              value = "--ignore-case";
+              icon = "[I]";
+              desc = "ignore case";
+            };
+            hidden = {
+              value = "--hidden";
+              desc = "hidden file";
+              icon = "[H]";
+            };
+            line = {
+              value = "-x";
+              icon = "[L]";
+              desc = "match in line";
+            };
+            word = {
+              value = "-w";
+              icon = "[W]";
+              desc = "match in word";
+            };
+          };
+        };
+      };
+      replace_engine = {
+        sed = {
+          # workaround https://github.com/nvim-pack/nvim-spectre/issues/101
+          # see https://github.com/nvim-pack/nvim-spectre/blob/9a28f926d3371b7ef02243cbbb653a0478d06e31/lua/spectre/init.lua#L45
+          cmd = "${pkgs.gnused}/bin/sed";
+          args = [ ];
+          options = {
+            ignore-case = {
+              value = "--ignore-case";
+              icon = "[I]";
+              desc = "ignore case";
+            };
+          };
+        };
+      };
+      default = {
+        find = {
+          cmd = "rg";
+          options = [
+            "word"
+            "hidden"
+          ];
+        };
+        replace = {
+          cmd = "sed";
+        };
+      };
     };
   };
 
