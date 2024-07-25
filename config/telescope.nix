@@ -51,7 +51,7 @@
         action = "buffers";
         options.desc = "+buffer";
       };
-      "<leader>ff" = {
+      "<C-p>" = {
         action = "find_files";
         options.desc = "Find project files";
       };
@@ -63,7 +63,7 @@
         action = "buffers";
         options.desc = "Buffers";
       };
-      "<C-p>" = {
+      "<leader>fg" = {
         action = "git_files";
         options.desc = "Search git files";
       };
