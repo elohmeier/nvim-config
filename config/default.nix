@@ -17,6 +17,7 @@
     ./lsp.nix
     ./neo-tree.nix
     ./neogit.nix
+    ./parrot.nix
     ./plantuml.nix
     ./spectre.nix
     ./ssr.nix

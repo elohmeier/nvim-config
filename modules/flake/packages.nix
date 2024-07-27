@@ -2,12 +2,16 @@ _: {
   perSystem = { pkgs, ... }: {
     packages = {
       inherit (pkgs)
-        attempt-nvim
-        ssr-nvim
-        telescope-luasnip-nvim
-        resession-nvim
+        # neovim variants
         nixvim-full
-        nixvim-minimal;
+        nixvim-minimal
+
+        # plugins
+        attempt-nvim
+        parrot-nvim
+        resession-nvim
+        ssr-nvim
+        telescope-luasnip-nvim;
 
       default = pkgs.nixvim-full;
     };
