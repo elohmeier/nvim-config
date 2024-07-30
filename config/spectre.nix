@@ -44,6 +44,8 @@
           # workaround https://github.com/nvim-pack/nvim-spectre/issues/101
           # see https://github.com/nvim-pack/nvim-spectre/blob/9a28f926d3371b7ef02243cbbb653a0478d06e31/lua/spectre/init.lua#L45
           cmd = "${pkgs.gnused}/bin/sed";
+          warn = false;
+
           args = [ ];
           options = {
             ignore-case = {
