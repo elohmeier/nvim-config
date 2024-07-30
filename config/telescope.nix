@@ -3,6 +3,9 @@
     enable = true;
 
     extensions = {
+      frecency = {
+        enable = true;
+      };
       fzf-native = {
         enable = true;
       };
@@ -35,9 +38,9 @@
     };
 
     keymaps = {
-      "<leader><space>" = {
-        action = "find_files";
-        options.desc = "Find project files";
+      "<C-p>" = {
+        action = "frecency workspace=CWD";
+        options.desc = "Find frequent or recent files";
       };
       "<leader>/" = {
         action = "live_grep";
@@ -51,7 +54,7 @@
         action = "buffers";
         options.desc = "+buffer";
       };
-      "<C-p>" = {
+      "<leader>ff" = {
         action = "find_files";
         options.desc = "Find project files";
       };
