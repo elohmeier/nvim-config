@@ -5,11 +5,15 @@
     extensions = {
       frecency = {
         enable = true;
+        settings = {
+          matcher = "fuzzy";
+        };
       };
       fzf-native = {
         enable = true;
       };
       ui-select = {
+        enable = true;
         settings = {
           specific_opts = {
             codeactions = true;
