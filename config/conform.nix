@@ -13,6 +13,12 @@
       toml = [ "taplo" ];
       typescript = [ "prettier" ];
       xml = [ "xmllint" ];
+
+      # run on all filetypes
+      "*" = [ "codespell" ];
+
+      # run on filetypes that don't have other formatters configured
+      "_" = [ "trim_whitespace" ];
     };
 
     formatters = {
@@ -89,6 +95,16 @@
     end, {
       desc = "Toggle autoformat-on-save",
       bang = true,
+    })
+
+    vim.api.nvim_create_user_command("RuffFix", function()
+      if vim.bo.filetype == "python" then
+        conform.format({ bufnr = 0, formatters = { "ruff_fix" } })
+      else
+        show_notification("RuffFix is only available for Python files", "warn")
+      end
+    end, {
+      desc = "Run ruff_fix formatter on Python files",
     })
   '';
 }
