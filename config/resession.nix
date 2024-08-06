@@ -1,7 +1,6 @@
-{ helpers, pkgs, ... }: {
-  extraPlugins = [
-    pkgs.resession-nvim
-  ];
+{ helpers, pkgs, ... }:
+{
+  extraPlugins = [ pkgs.resession-nvim ];
 
   keymaps = [
     {

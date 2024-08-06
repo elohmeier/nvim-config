@@ -1,3 +1,1 @@
-{
-  plugins.plantuml-syntax.enable = true;
-}
+{ plugins.plantuml-syntax.enable = true; }

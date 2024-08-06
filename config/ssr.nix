@@ -1,7 +1,6 @@
-{ pkgs, ... }: {
-  extraPlugins = [
-    pkgs.ssr-nvim
-  ];
+{ pkgs, ... }:
+{
+  extraPlugins = [ pkgs.ssr-nvim ];
 
   keymaps = [
     {

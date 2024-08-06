@@ -1,6 +1,1 @@
-{
-  imports = [
-    ./flake
-  ];
-}
-
+{ imports = [ ./flake ]; }

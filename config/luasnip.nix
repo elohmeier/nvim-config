@@ -1,7 +1,6 @@
-{ pkgs, ... }: {
-  extraPlugins = [
-    pkgs.telescope-luasnip-nvim
-  ];
+{ pkgs, ... }:
+{
+  extraPlugins = [ pkgs.telescope-luasnip-nvim ];
 
   plugins.luasnip = {
     enable = true;
@@ -10,7 +9,10 @@
       store_selection_keys = "<Tab>";
     };
     fromVscode = [
-      { lazyLoad = true; paths = ../snippets; }
+      {
+        lazyLoad = true;
+        paths = ../snippets;
+      }
     ];
   };
 

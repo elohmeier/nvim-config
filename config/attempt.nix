@@ -1,7 +1,6 @@
-{ helpers, pkgs, ... }: {
-  extraPlugins = [
-    pkgs.attempt-nvim
-  ];
+{ helpers, pkgs, ... }:
+{
+  extraPlugins = [ pkgs.attempt-nvim ];
 
   plugins.telescope = {
     enabledExtensions = [ "attempt" ];
@@ -46,4 +45,3 @@
       require("attempt").setup(${helpers.toLuaObject options})
     '';
 }
-

@@ -54,9 +54,11 @@
   };
 
   # disable diagnostics for .env files
-  autoCmd = [{
-    event = [ "BufEnter" ];
-    pattern = [ ".env" ];
-    callback.__raw = "function(args) vim.diagnostic.disable(args.buf) end";
-  }];
+  autoCmd = [
+    {
+      event = [ "BufEnter" ];
+      pattern = [ ".env" ];
+      callback.__raw = "function(args) vim.diagnostic.disable(args.buf) end";
+    }
+  ];
 }

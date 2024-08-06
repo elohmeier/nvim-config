@@ -2,7 +2,8 @@
 
 {
   flake.overlays = {
-    default = final: _prev:
+    default =
+      final: _prev:
       let
         nixvim' = inputs.nixvim.legacyPackages.${final.system};
       in
@@ -14,9 +15,7 @@
 
         nixvim-minimal = nixvim'.makeNixvimWithModule {
           pkgs = final;
-          module = import ../../config {
-            minimal = true;
-          };
+          module = import ../../config { minimal = true; };
         };
 
         attempt-nvim = final.callPackage ../../packages/attempt-nvim { };
@@ -27,16 +26,15 @@
       };
   };
 
-  perSystem = { system, ... }: {
-    _module.args.pkgs = import inputs.nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
+  perSystem =
+    { system, ... }:
+    {
+      _module.args.pkgs = import inputs.nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+        overlays = [ self.overlays.default ];
       };
-      overlays = [
-        self.overlays.default
-      ];
     };
-  };
 }
-

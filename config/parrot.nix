@@ -1,7 +1,6 @@
-{ helpers, pkgs, ... }: {
-  extraPlugins = [
-    pkgs.parrot-nvim
-  ];
+{ helpers, pkgs, ... }:
+{
+  extraPlugins = [ pkgs.parrot-nvim ];
 
   keymaps = [
     {
