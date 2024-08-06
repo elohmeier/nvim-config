@@ -7,7 +7,7 @@
       json = [ "prettier" ];
       jsonnet = [ "jsonnetfmt" ];
       lua = [ "stylua" ];
-      nix = [ "nixpkgs_fmt" ];
+      nix = [ "nixfmt" ];
       python = [ "ruff_format" ];
       svelte = [ "prettier" ];
       toml = [ "taplo" ];

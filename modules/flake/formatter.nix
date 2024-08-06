@@ -8,7 +8,7 @@
       programs.deadnix.enable = true;
       programs.deadnix.no-lambda-pattern-names = true;
 
-      programs.nixpkgs-fmt.enable = true;
+      programs.nixfmt.enable = true;
 
       programs.prettier = {
         enable = true;
