@@ -9,7 +9,6 @@
       lua = [ "stylua" ];
       nix = [ "nixfmt" ];
       python = [ "ruff_format" ];
-      svelte = [ "prettier" ];
       toml = [ "taplo" ];
       typescript = [ "prettier" ];
       xml = [ "xmllint" ];

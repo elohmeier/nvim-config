@@ -26,6 +26,7 @@
       regex
       rust
       ssh-config
+      svelte
       toml
       typescript
       vim
@@ -114,6 +115,18 @@
 
   plugins.ts-context-commentstring = {
     enable = true;
-    disableAutoInitialization = false;
+    extraOptions = {
+      enable_autocmd = false;
+    };
   };
+
+  # https://github.com/JoosepAlviste/nvim-ts-context-commentstring/wiki/Integrations#native-commenting-in-neovim-010
+  extraConfigLua = ''
+    local get_option = vim.filetype.get_option
+    vim.filetype.get_option = function(filetype, option)
+      return option == "commentstring"
+        and require("ts_context_commentstring.internal").calculate_commentstring()
+        or get_option(filetype, option)
+    end
+  '';
 }
