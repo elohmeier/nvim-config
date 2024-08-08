@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins.conform-nvim = {
     enable = true;
@@ -27,6 +28,18 @@
       ];
     };
   };
+
+  extraPackages = with pkgs; [
+    codespell
+    djlint
+    go-jsonnet
+    libxml2 # for xmllint
+    nixfmt-rfc-style
+    nodePackages.prettier
+    ruff
+    stylua
+    taplo
+  ];
 
   keymaps = [
     {
