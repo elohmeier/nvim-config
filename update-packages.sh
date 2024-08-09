@@ -3,6 +3,7 @@
 set -e
 set -x
 
+nix-update --flake --commit --version=branch aider-nvim
 nix-update --flake --commit --version=branch attempt-nvim
 nix-update --flake --commit --version=branch ssr-nvim
 nix-update --flake --commit --version=branch telescope-luasnip-nvim

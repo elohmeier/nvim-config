@@ -9,6 +9,7 @@ _: {
           nixvim-minimal
 
           # plugins
+          aider-nvim
           attempt-nvim
           parrot-nvim
           resession-nvim

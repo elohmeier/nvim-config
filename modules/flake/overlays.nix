@@ -18,6 +18,7 @@
           module = import ../../config { minimal = true; };
         };
 
+        aider-nvim = final.callPackage ../../packages/aider-nvim { };
         attempt-nvim = final.callPackage ../../packages/attempt-nvim { };
         parrot-nvim = final.callPackage ../../packages/parrot-nvim { };
         resession-nvim = final.callPackage ../../packages/resession-nvim { };

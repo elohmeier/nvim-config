@@ -18,6 +18,7 @@
         [ ]
       else
         [
+          ./aider.nix
           ./cmp.nix
           ./conform.nix
           ./copilot.nix
