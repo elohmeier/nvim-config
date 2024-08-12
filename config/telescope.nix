@@ -6,6 +6,7 @@
       frecency = {
         enable = true;
         settings = {
+          db_safe_mode = false; # disable “remove n entries from database?” dialog
           matcher = "fuzzy";
         };
       };
