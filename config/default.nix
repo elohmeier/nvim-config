@@ -27,6 +27,7 @@
           ./lsp.nix
           ./neo-tree.nix
           ./neogit.nix
+          ./oil.nix
           ./parrot.nix
           ./plantuml.nix
           ./spectre.nix
