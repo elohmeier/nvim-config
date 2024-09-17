@@ -155,6 +155,15 @@
 
     {
       mode = "n";
+      key = "<C-j>";
+      action = "<cmd>Telescope lsp_references<CR>";
+      options = {
+        desc = "References";
+      };
+    }
+
+    {
+      mode = "n";
       key = "<leader>sd";
       action = "<cmd>Telescope diagnostics bufnr=0<cr>";
       options = {
