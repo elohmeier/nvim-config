@@ -34,6 +34,7 @@
           ./lsp.nix
           ./neo-tree.nix
           ./neogit.nix
+          ./notebooks.nix
           ./oil.nix
           ./parrot.nix
           ./plantuml.nix

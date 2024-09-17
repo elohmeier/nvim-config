@@ -21,6 +21,7 @@
         aider-nvim = final.callPackage ../../packages/aider-nvim { };
         attempt-nvim = final.callPackage ../../packages/attempt-nvim { };
         lua-scripts = final.callPackage ../../packages/lua-scripts { };
+        notebook-navigator-nvim = final.callPackage ../../packages/notebook-navigator-nvim { };
         parrot-nvim = final.callPackage ../../packages/parrot-nvim { };
         resession-nvim = final.callPackage ../../packages/resession-nvim { };
         ssr-nvim = final.callPackage ../../packages/ssr-nvim { };
