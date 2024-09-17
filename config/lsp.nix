@@ -4,6 +4,7 @@
 
     servers = {
       bashls.enable = true;
+      clangd.enable = true;
       gopls.enable = true;
       jsonnet-ls.enable = true;
       lua-ls.enable = true;
@@ -17,7 +18,7 @@
       };
       svelte.enable = true;
       tailwindcss.enable = true;
-      tsserver.enable = true;
+      ts-ls.enable = true;
     };
 
     keymaps = {
@@ -31,21 +32,31 @@
       };
 
       extra = [
+        # use [d ]d instead
+        # {
+        #   action.__raw = "function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+        #   key = "<C-j>";
+        #   mode = "n";
+        #   options = {
+        #     desc = "Next Diagnostic";
+        #     silent = true;
+        #   };
+        # }
+        # {
+        #   action.__raw = "function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+        #   key = "<C-k>";
+        #   mode = "n";
+        #   options = {
+        #     desc = "Previous Diagnostic";
+        #     silent = true;
+        #   };
+        # }
         {
-          action.__raw = "function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.WARN } }) end";
-          key = "<C-j>";
-          mode = "n";
-          options = {
-            desc = "Next Diagnostic";
-            silent = true;
-          };
-        }
-        {
-          action.__raw = "function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+          action = "<cmd>lua vim.lsp.buf.definition()<CR>";
           key = "<C-k>";
           mode = "n";
           options = {
-            desc = "Previous Diagnostic";
+            desc = "Goto Definition";
             silent = true;
           };
         }
