@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   colorschemes = {
     # rose-pine = {
@@ -12,6 +13,12 @@
 
     tokyonight = {
       enable = true;
+
+      settings = {
+        style = "storm";
+        light_style = "day";
+        transparent = true;
+      };
     };
   };
 
@@ -19,4 +26,9 @@
   #   Normal.bg = "none";
   #   NormalFloat.bg = "none";
   # };
+
+  # extraConfigLua = ''
+  #   local bgwinch = require("bgwinch")
+  #   bgwinch.setup()
+  # '';
 }
