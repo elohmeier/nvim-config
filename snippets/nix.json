@@ -1,6 +1,6 @@
 {
-  "nixflakepythondevshell": {
-    "prefix": "nfpd",
+  "pythondevshellflake": {
+    "prefix": "pythondevshellflake",
     "body": [
       "{",
       "  inputs = {",
@@ -41,5 +41,23 @@
       "}"
     ],
     "description": "Nix Flake configuration with Python development shell"
+  },
+  "vimplugin": {
+    "prefix": "vimplugin",
+    "body": [
+      "{ vimUtils, fetchFromGitHub }:",
+      "",
+      "vimUtils.buildVimPlugin {",
+      "  pname = \"${1:plugin-name}\";",
+      "  version = \"${2:0-unstable-yyyy-mm-dd}\";",
+      "  src = fetchFromGitHub {",
+      "    owner = \"${3:owner}\";",
+      "    repo = \"${1:plugin-name}\";",
+      "    rev = \"${5:rev}\";",
+      "    hash = \"\";",
+      "  };",
+      "}"
+    ],
+    "description": "Nix derivation for a Vim plugin"
   }
 }
