@@ -12,6 +12,12 @@
       ./remap.nix
       ./resession.nix
       ./set.nix
+      (
+        { pkgs, ... }:
+        {
+          extraPlugins = [ pkgs.lua-scripts ];
+        }
+      )
     ]
     ++ (
       if minimal then
@@ -19,6 +25,7 @@
       else
         [
           ./aider.nix
+          ./aw-watcher.nix
           ./cmp.nix
           ./conform.nix
           ./copilot.nix

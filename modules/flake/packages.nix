@@ -11,6 +11,7 @@ _: {
           # plugins
           aider-nvim
           attempt-nvim
+          lua-scripts
           parrot-nvim
           resession-nvim
           ssr-nvim
