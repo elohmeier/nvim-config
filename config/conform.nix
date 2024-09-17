@@ -3,34 +3,49 @@
   plugins.conform-nvim = {
     enable = true;
 
-    formattersByFt = {
-      htmldjango = [ "djlint" ];
-      json = [ "prettier" ];
-      jsonnet = [ "jsonnetfmt" ];
-      lua = [ "stylua" ];
-      nix = [ "nixfmt" ];
-      python = [ "ruff_format" ];
-      toml = [ "taplo" ];
-      typescript = [ "prettier" ];
-      xml = [ "xmllint" ];
+    settings = {
+      formatters_by_ft = {
+        cpp = [ "clang-format" ];
+        htmldjango = [ "djlint" ];
+        json = [ "prettier" ];
+        jsonnet = [ "jsonnetfmt" ];
+        lua = [ "stylua" ];
+        nix = [ "nixfmt" ];
+        python = [
+          "ruff_format"
+          "ruff_fix"
+        ];
+        toml = [ "taplo" ];
+        typescript = [ "prettier" ];
+        xml = [ "xmllint" ];
 
-      # run on all filetypes
-      "*" = [ "codespell" ];
+        # run on filetypes that don't have other formatters configured
+        "_" = [ "trim_whitespace" ];
+      };
 
-      # run on filetypes that don't have other formatters configured
-      "_" = [ "trim_whitespace" ];
-    };
+      formatters = {
+        ruff_fix.args = [
+          "check"
+          "--fix"
+          "--select"
+          "I,UP"
+          "--force-exclude"
+          "--exit-zero"
+          "--no-cache"
+          "--stdin-filename"
+          "$FILENAME"
+          "-"
+        ];
 
-    formatters = {
-      shfmt.prepend_args = [
-        "-i"
-        "4"
-      ];
+        shfmt.prepend_args = [
+          "-i"
+          "4"
+        ];
+      };
     };
   };
 
   extraPackages = with pkgs; [
-    codespell
     djlint
     go-jsonnet
     libxml2 # for xmllint
