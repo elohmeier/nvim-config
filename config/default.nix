@@ -28,7 +28,7 @@
           ./aw-watcher.nix
           ./cmp.nix
           ./conform.nix
-          ./copilot.nix
+          # ./copilot.nix
           ./dap.nix
           ./gitsigns.nix
           ./lsp.nix
