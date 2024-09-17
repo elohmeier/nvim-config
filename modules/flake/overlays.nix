@@ -25,6 +25,7 @@
         resession-nvim = final.callPackage ../../packages/resession-nvim { };
         ssr-nvim = final.callPackage ../../packages/ssr-nvim { };
         telescope-luasnip-nvim = final.callPackage ../../packages/telescope-luasnip-nvim { };
+        wezterm-nvim = final.callPackage ../../packages/wezterm-nvim { };
       };
   };
 

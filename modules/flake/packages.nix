@@ -16,6 +16,7 @@ _: {
           resession-nvim
           ssr-nvim
           telescope-luasnip-nvim
+          wezterm-nvim
           ;
 
         default = pkgs.nixvim-full;

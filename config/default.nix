@@ -42,6 +42,7 @@
           ./telescope.nix
           ./treesitter.nix
           ./trouble.nix
+          ./wezterm.nix
         ]
     );
 
