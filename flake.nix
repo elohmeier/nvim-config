@@ -26,7 +26,8 @@
       url = "github:hercules-ci/gitignore.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs.follows = "nixvim/nixpkgs";
+    # nixpkgs.follows = "nixvim/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/master";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.devshell.follows = "devshell";

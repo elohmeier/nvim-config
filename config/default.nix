@@ -25,6 +25,7 @@
       else
         [
           ./aider.nix
+          ./avante.nix
           ./aw-watcher.nix
           ./cmp.nix
           ./conform.nix
