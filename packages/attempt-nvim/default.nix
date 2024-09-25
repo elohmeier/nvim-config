@@ -1,4 +1,8 @@
-{ vimUtils, fetchFromGitHub }:
+{
+  vimUtils,
+  vimPlugins,
+  fetchFromGitHub,
+}:
 
 vimUtils.buildVimPlugin {
   pname = "attempt.nvim";
@@ -9,4 +13,5 @@ vimUtils.buildVimPlugin {
     rev = "3905db768478a2152fd927ab5a8def85bc2e34e7";
     hash = "sha256-OI19fPJGMLLYOt3hp26FsS6EJadzDtpuquz3PxmK2kg=";
   };
+  dependencies = [ vimPlugins.plenary-nvim ];
 }
