@@ -6,6 +6,8 @@
     };
   };
 
+  plugins.gitsigns.settings.trouble = true;
+
   keymaps = [
     {
       mode = "n";

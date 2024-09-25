@@ -1,6 +1,10 @@
 {
   plugins.neogit = {
     enable = true;
+
+    # avoid deps
+    gitPackage = null;
+    whichPackage = null;
   };
   keymaps = [
     {

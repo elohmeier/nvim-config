@@ -9,6 +9,9 @@
       followCurrentFile.enabled = true;
       useLibuvFileWatcher = true;
     };
+
+    # avoid git dependency
+    gitPackage = null;
   };
 
   keymaps = [

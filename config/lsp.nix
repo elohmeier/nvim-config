@@ -1,24 +1,60 @@
+{ minimal }:
+{ lib, ... }:
 {
   plugins.lsp = {
     enable = true;
 
     servers = {
-      bashls.enable = true;
-      clangd.enable = true;
-      gopls.enable = true;
-      jsonnet-ls.enable = true;
-      lua-ls.enable = true;
-      nil-ls.enable = true;
-      pyright.enable = true;
-      ruff-lsp.enable = true;
+      bashls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      clangd = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      gopls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      jsonnet-ls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      lua-ls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      nil-ls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      pyright = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      ruff-lsp = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
       rust-analyzer = {
         enable = true;
         installCargo = false;
         installRustc = false;
+        package = lib.mkIf minimal null;
       };
-      svelte.enable = true;
-      tailwindcss.enable = true;
-      ts-ls.enable = true;
+      svelte = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      tailwindcss = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
+      ts-ls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
     };
 
     keymaps = {

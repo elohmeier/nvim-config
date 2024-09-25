@@ -35,6 +35,11 @@
       yaml
     ];
 
+    # not required when using grammarPackages
+    gccPackage = null;
+    nodejsPackage = null;
+    treesitterPackage = null;
+
     settings = {
       highlight.enable = true;
       indent.enable = true;

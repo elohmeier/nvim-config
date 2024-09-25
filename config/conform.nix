@@ -1,4 +1,5 @@
-{ pkgs, ... }:
+{ minimal }:
+{ lib, pkgs, ... }:
 {
   plugins.conform-nvim = {
     enable = true;
@@ -45,16 +46,18 @@
     };
   };
 
-  extraPackages = with pkgs; [
-    djlint
-    go-jsonnet
-    libxml2 # for xmllint
-    nixfmt-rfc-style
-    nodePackages.prettier
-    ruff
-    stylua
-    taplo
-  ];
+  extraPackages =
+    with pkgs;
+    lib.mkIf (!minimal) [
+      djlint
+      go-jsonnet
+      libxml2 # for xmllint
+      nixfmt-rfc-style
+      nodePackages.prettier
+      ruff
+      stylua
+      taplo
+    ];
 
   keymaps = [
     {
