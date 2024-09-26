@@ -6,6 +6,7 @@
     [
       (import ./conform.nix { inherit minimal; })
       (import ./lsp.nix { inherit minimal; })
+      (import ./molten.nix { inherit minimal; })
       ./attempt.nix
       ./cmp.nix
       ./colors.nix
@@ -43,7 +44,7 @@
           ./avante.nix
           ./aw-watcher.nix
           ./dap.nix
-          ./notebooks.nix
+          ./jupytext.nix
           ./parrot.nix
           ./plantuml.nix
           ./wezterm.nix

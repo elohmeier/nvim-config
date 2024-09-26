@@ -12,7 +12,6 @@ _: {
           aider-nvim
           attempt-nvim
           lua-scripts
-          notebook-navigator-nvim
           parrot-nvim
           resession-nvim
           ssr-nvim
