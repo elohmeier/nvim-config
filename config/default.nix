@@ -10,6 +10,7 @@
       ./cmp.nix
       ./colors.nix
       ./gitsigns.nix
+      ./lazygit.nix
       ./luasnip.nix
       ./mini.nix
       ./neo-tree.nix

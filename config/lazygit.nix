@@ -1,17 +1,17 @@
 {
-  plugins.neogit = {
+  plugins.lazygit = {
     enable = true;
 
     # avoid deps
     gitPackage = null;
-    whichPackage = null;
+    lazygitPackage = null;
   };
 
   keymaps = [
     {
       mode = "n";
-      key = "<leader>ng";
-      action = "<cmd>Neogit<CR>";
+      key = "<leader>gg";
+      action = "<cmd>LazyGit<CR>";
     }
   ];
 }
