@@ -59,10 +59,10 @@
         action = "buffers";
         options.desc = "+buffer";
       };
-      "<leader>ff" = {
-        action = "find_files";
-        options.desc = "Find project files";
-      };
+      # "<leader>ff" = {
+      #   action = "find_files";
+      #   options.desc = "Find project files";
+      # };
       "<leader>fr" = {
         action = "oldfiles";
         options.desc = "Recent";

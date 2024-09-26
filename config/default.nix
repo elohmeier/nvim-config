@@ -9,6 +9,7 @@
       ./attempt.nix
       ./cmp.nix
       ./colors.nix
+      ./fzf-lua.nix
       ./gitsigns.nix
       ./lazygit.nix
       ./luasnip.nix
