@@ -2,7 +2,7 @@
 {
   extraPlugins = [
     pkgs.vimPlugins.avante-nvim
-    pkgs.vimPlugins.render-markdown
+    pkgs.vimPlugins.render-markdown-nvim
   ];
 
   extraConfigLua =
