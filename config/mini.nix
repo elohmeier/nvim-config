@@ -4,10 +4,17 @@
     modules = {
       bracketed = { };
       cursorword = { };
+      icons = {
+        style = "glyph";
+      };
       statusline = { };
       tabline = { };
     };
+
+    mockDevIcons = true;
   };
+
+  plugins.web-devicons.enable = false;
 
   extraConfigLua = ''
     local function cursorword_block()
@@ -23,5 +30,10 @@
       pattern = "*",
       callback = cursorword_block
     })
+
+    if vim.fn.filereadable("/proc/sys/fs/binfmt_misc/WSLInterop") == 1 then
+      -- WSL may not have an icon font available
+      MiniIcons.setup({ style = "ascii" })
+    end
   '';
 }
