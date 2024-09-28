@@ -68,25 +68,24 @@
       };
 
       extra = [
-        # use [d ]d instead
-        # {
-        #   action.__raw = "function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.WARN } }) end";
-        #   key = "<C-j>";
-        #   mode = "n";
-        #   options = {
-        #     desc = "Next Diagnostic";
-        #     silent = true;
-        #   };
-        # }
-        # {
-        #   action.__raw = "function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.WARN } }) end";
-        #   key = "<C-k>";
-        #   mode = "n";
-        #   options = {
-        #     desc = "Previous Diagnostic";
-        #     silent = true;
-        #   };
-        # }
+        {
+          action.__raw = "function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+          key = "]d"; # override default binding
+          mode = "n";
+          options = {
+            desc = "Next Diagnostic";
+            silent = true;
+          };
+        }
+        {
+          action.__raw = "function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.WARN } }) end";
+          key = "[d"; # override default binding
+          mode = "n";
+          options = {
+            desc = "Previous Diagnostic";
+            silent = true;
+          };
+        }
         {
           action = "<cmd>lua vim.lsp.buf.definition()<CR>";
           key = "<C-k>";
