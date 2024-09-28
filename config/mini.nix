@@ -1,3 +1,4 @@
+{ ascii }:
 {
   plugins.mini = {
     enable = true;
@@ -5,7 +6,7 @@
       bracketed = { };
       cursorword = { };
       icons = {
-        style = "glyph";
+        style = if ascii then "ascii" else "glyph";
       };
       statusline = { };
       tabline = { };
@@ -30,10 +31,5 @@
       pattern = "*",
       callback = cursorword_block
     })
-
-    if vim.fn.filereadable("/proc/sys/fs/binfmt_misc/WSLInterop") == 1 then
-      -- WSL may not have an icon font available
-      MiniIcons.setup({ style = "ascii" })
-    end
   '';
 }

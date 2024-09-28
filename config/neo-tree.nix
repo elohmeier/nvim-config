@@ -1,3 +1,5 @@
+{ ascii }:
+{ lib, ... }:
 {
   plugins.neo-tree = {
     enable = true;
@@ -12,6 +14,13 @@
 
     # avoid git dependency
     gitPackage = null;
+
+    defaultComponentConfigs.icon = lib.mkIf ascii {
+      folderClosed = "▸";
+      folderOpen = "▾";
+      folderEmpty = "▸";
+      folderEmptyOpen = "▾";
+    };
   };
 
   keymaps = [

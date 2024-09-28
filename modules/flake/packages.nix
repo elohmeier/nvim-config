@@ -7,6 +7,7 @@ _: {
           # neovim variants
           nixvim-full
           nixvim-minimal
+          nixvim-minimal-ascii
 
           # plugins
           aider-nvim

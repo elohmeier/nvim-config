@@ -1,4 +1,5 @@
 {
+  ascii ? false,
   minimal ? false,
 }:
 {
@@ -6,7 +7,9 @@
     [
       (import ./conform.nix { inherit minimal; })
       (import ./lsp.nix { inherit minimal; })
+      (import ./mini.nix { inherit ascii; })
       (import ./molten.nix { inherit minimal; })
+      (import ./neo-tree.nix { inherit ascii; })
       ./attempt.nix
       ./cmp.nix
       ./colors.nix
@@ -14,8 +17,6 @@
       ./gitsigns.nix
       ./lazygit.nix
       ./luasnip.nix
-      ./mini.nix
-      ./neo-tree.nix
       ./neogit.nix
       ./notify.nix
       ./oil.nix
