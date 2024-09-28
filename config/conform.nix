@@ -7,7 +7,7 @@
     settings = {
       formatters_by_ft = {
         cpp = [ "clang-format" ];
-        htmldjango = [ "djlint" ];
+        htmldjango = [ "djade" ];
         json = [ "prettier" ];
         jsonnet = [ "jsonnetfmt" ];
         lua = [ "stylua" ];
@@ -25,6 +25,20 @@
       };
 
       formatters = {
+        djade = {
+          meta = {
+            url = "https://github.com/adamchainz/djade";
+            description = "A Django template formatter.";
+          };
+          command = "djade";
+          args = [ "$FILENAME" ];
+          stdin = false;
+          exit_codes = [
+            0
+            1
+          ];
+        };
+
         ruff_fix.args = [
           "check"
           "--fix"
@@ -49,7 +63,6 @@
   extraPackages =
     with pkgs;
     lib.mkIf (!minimal) [
-      djlint
       go-jsonnet
       libxml2 # for xmllint
       nixfmt-rfc-style
