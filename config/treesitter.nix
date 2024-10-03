@@ -6,6 +6,7 @@
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
+      beancount
       c
       git_config
       git_rebase
