@@ -10,6 +10,12 @@
       bindToCwd = false;
       followCurrentFile.enabled = true;
       useLibuvFileWatcher = true;
+
+      filteredItems = {
+        hideByName = [
+          "__pycache__"
+        ];
+      };
     };
 
     # avoid git dependency
