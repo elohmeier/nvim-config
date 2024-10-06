@@ -19,6 +19,7 @@
         toml = [ "taplo" ];
         typescript = [ "prettier" ];
         xml = [ "xmllint" ];
+        yaml = [ "prettier" ];
 
         # run on filetypes that don't have other formatters configured
         "_" = [ "trim_whitespace" ];
