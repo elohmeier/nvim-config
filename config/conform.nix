@@ -5,25 +5,32 @@
     enable = true;
 
     settings = {
-      formatters_by_ft = {
-        cpp = [ "clang-format" ];
-        htmldjango = [ "djade" ];
-        json = [ "prettier" ];
-        jsonnet = [ "jsonnetfmt" ];
-        lua = [ "stylua" ];
-        nix = [ "nixfmt" ];
-        python = [
-          "ruff_format"
-          "ruff_fix"
-        ];
-        toml = [ "taplo" ];
-        typescript = [ "prettier" ];
-        xml = [ "xmllint" ];
-        yaml = [ "prettier" ];
+      formatters_by_ft =
+        let
+          prettier = {
+            __unkeyed-1 = "prettier";
+            timeout_ms = 2000;
+          };
+        in
+        {
+          cpp = [ "clang-format" ];
+          htmldjango = [ "djade" ];
+          json = prettier;
+          jsonnet = [ "jsonnetfmt" ];
+          lua = [ "stylua" ];
+          nix = [ "nixfmt" ];
+          python = [
+            "ruff_format"
+            "ruff_fix"
+          ];
+          toml = [ "taplo" ];
+          typescript = prettier;
+          xml = [ "xmllint" ];
+          yaml = prettier;
 
-        # run on filetypes that don't have other formatters configured
-        "_" = [ "trim_whitespace" ];
-      };
+          # run on filetypes that don't have other formatters configured
+          "_" = [ "trim_whitespace" ];
+        };
 
       formatters = {
         djade = {
