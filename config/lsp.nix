@@ -17,15 +17,15 @@
         enable = true;
         package = lib.mkIf minimal null;
       };
-      jsonnet-ls = {
+      jsonnet_ls = {
         enable = true;
         package = lib.mkIf minimal null;
       };
-      lua-ls = {
+      lua_ls = {
         enable = true;
         package = lib.mkIf minimal null;
       };
-      nil-ls = {
+      nil_ls = {
         enable = true;
         package = lib.mkIf minimal null;
       };
@@ -33,11 +33,11 @@
         enable = true;
         package = lib.mkIf minimal null;
       };
-      ruff-lsp = {
+      ruff_lsp = {
         enable = true;
         package = lib.mkIf minimal null;
       };
-      rust-analyzer = {
+      rust_analyzer = {
         enable = true;
         installCargo = false;
         installRustc = false;
@@ -51,7 +51,7 @@
         enable = true;
         package = lib.mkIf minimal null;
       };
-      ts-ls = {
+      ts_ls = {
         enable = true;
         package = lib.mkIf minimal null;
       };
