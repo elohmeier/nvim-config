@@ -16,6 +16,7 @@
           "ruff_format"
           "ruff_fix"
         ];
+        svelte = [ "deno_fmt" ];
         toml = [ "taplo" ];
         typescript = [ "deno_fmt" ];
         xml = [ "xmllint" ];
@@ -26,6 +27,28 @@
       };
 
       formatters = {
+        deno_fmt.args.__raw = ''
+          function(self, ctx)
+            local extensions = {
+              esmodule = "mjs",
+              javascript = "js",
+              javascriptreact = "jsx",
+              json = "json",
+              jsonc = "jsonc",
+              markdown = "md",
+              svelte = "svelte",
+              typescript = "ts",
+              typescriptreact = "tsx",
+            }
+            return {
+              "fmt",
+              "-",
+              "--ext",
+              extensions[vim.bo[ctx.buf].filetype],
+            }
+          end
+        '';
+
         djade = {
           meta = {
             url = "https://github.com/adamchainz/djade";
