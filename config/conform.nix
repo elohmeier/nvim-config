@@ -5,32 +5,25 @@
     enable = true;
 
     settings = {
-      formatters_by_ft =
-        let
-          prettier = {
-            __unkeyed-1 = "prettier";
-            timeout_ms = 2000;
-          };
-        in
-        {
-          cpp = [ "clang-format" ];
-          htmldjango = [ "djade" ];
-          json = prettier;
-          jsonnet = [ "jsonnetfmt" ];
-          lua = [ "stylua" ];
-          nix = [ "nixfmt" ];
-          python = [
-            "ruff_format"
-            "ruff_fix"
-          ];
-          toml = [ "taplo" ];
-          typescript = prettier;
-          xml = [ "xmllint" ];
-          yaml = prettier;
+      formatters_by_ft = {
+        cpp = [ "clang-format" ];
+        htmldjango = [ "djade" ];
+        json = [ "deno_fmt" ];
+        jsonnet = [ "jsonnetfmt" ];
+        lua = [ "stylua" ];
+        nix = [ "nixfmt" ];
+        python = [
+          "ruff_format"
+          "ruff_fix"
+        ];
+        toml = [ "taplo" ];
+        typescript = [ "deno_fmt" ];
+        xml = [ "xmllint" ];
+        yaml = [ "deno_fmt" ];
 
-          # run on filetypes that don't have other formatters configured
-          "_" = [ "trim_whitespace" ];
-        };
+        # run on filetypes that don't have other formatters configured
+        "_" = [ "trim_whitespace" ];
+      };
 
       formatters = {
         djade = {
@@ -71,10 +64,10 @@
   extraPackages =
     with pkgs;
     lib.mkIf (!minimal) [
+      deno
       go-jsonnet
       libxml2 # for xmllint
       nixfmt-rfc-style
-      nodePackages.prettier
       ruff
       stylua
       taplo
