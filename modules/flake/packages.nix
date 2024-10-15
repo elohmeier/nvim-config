@@ -6,6 +6,7 @@ _: {
         inherit (pkgs)
           # neovim variants
           nixvim-full
+          nixvim-full-aw
           nixvim-minimal
           nixvim-minimal-ascii
 

@@ -13,6 +13,11 @@
           module = import ../../config { };
         };
 
+        nixvim-full-aw = nixvim'.makeNixvimWithModule {
+          pkgs = final;
+          module = import ../../config { aw = true; };
+        };
+
         nixvim-minimal = nixvim'.makeNixvimWithModule {
           pkgs = final;
           module = import ../../config { minimal = true; };

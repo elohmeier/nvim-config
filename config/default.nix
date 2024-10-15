@@ -1,6 +1,7 @@
 {
   ascii ? false,
   minimal ? false,
+  aw ? false,
 }:
 {
   imports =
@@ -36,6 +37,15 @@
       )
     ]
     ++ (
+      if aw then
+        [
+          ./aw-watcher.nix
+        ]
+      else
+        [
+        ]
+    )
+    ++ (
       if minimal then
         [ ]
       else
@@ -43,7 +53,6 @@
           # ./copilot.nix
           ./aider.nix
           ./avante.nix
-          ./aw-watcher.nix
           ./dap.nix
           ./jupytext.nix
           ./parrot.nix
