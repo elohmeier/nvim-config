@@ -29,6 +29,10 @@
         enable = true;
         package = lib.mkIf minimal null;
       };
+      tinymist = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
       pyright = {
         enable = true;
         package = lib.mkIf minimal null;

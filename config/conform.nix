@@ -19,6 +19,7 @@
         svelte = [ "deno_fmt" ];
         toml = [ "taplo" ];
         typescript = [ "deno_fmt" ];
+        typst = [ "typstyle" ];
         xml = [ "xmllint" ];
         yaml = [ "deno_fmt" ];
 
@@ -94,6 +95,7 @@
       ruff
       stylua
       taplo
+      typstyle
     ];
 
   keymaps = [

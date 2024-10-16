@@ -30,6 +30,7 @@
       svelte
       toml
       typescript
+      typst
       vim
       vimdoc
       xml
