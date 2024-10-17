@@ -106,12 +106,26 @@
     };
   };
 
-  # disable diagnostics for .env files
   autoCmd = [
+    # disable diagnostics for .env files
     {
       event = [ "BufEnter" ];
       pattern = [ ".env" ];
-      callback.__raw = "function(args) vim.diagnostic.disable(args.buf) end";
+      callback.__raw = ''
+        function(args)
+            vim.diagnostic.disable(args.buf)
+        end
+      '';
+    }
+    # set commentstring for typst files
+    {
+      event = [ "FileType" ];
+      pattern = [ "typst" ];
+      callback.__raw = ''
+        function(args)
+            vim.bo[args.buf].commentstring = "// %s"
+        end
+      '';
     }
   ];
 }
