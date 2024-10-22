@@ -40,6 +40,7 @@
               svelte = "svelte",
               typescript = "ts",
               typescriptreact = "tsx",
+              yaml = "yaml",
             }
             return {
               "fmt",
