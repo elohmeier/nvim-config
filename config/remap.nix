@@ -24,6 +24,11 @@
       key = "<leader>Y";
       action = ''"+Y'';
     }
+    {
+      mode = "n";
+      key = "<leader>p";
+      action = ''"+p'';
+    }
 
     {
       mode = [
