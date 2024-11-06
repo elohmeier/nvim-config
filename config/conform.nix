@@ -7,6 +7,7 @@
     settings = {
       formatters_by_ft = {
         cpp = [ "clang-format" ];
+        hcl = [ "packer_fmt" ];
         htmldjango = [ "djade" ];
         json = [ "deno_fmt" ];
         jsonnet = [ "jsonnetfmt" ];

@@ -13,6 +13,7 @@
       gitattributes
       gitcommit
       gitignore
+      hcl
       helm
       javascript
       jsdoc
