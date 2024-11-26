@@ -1,8 +1,13 @@
 { ascii }:
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   plugins.neo-tree = {
     enable = true;
+
+    package = pkgs.vimPlugins.neo-tree-nvim.overrideAttrs (_: {
+      # https://github.com/nvim-neo-tree/neo-tree.nvim/pull/1609
+      patches = [ ./neo-tree-relative-symlinks.patch ];
+    });
 
     extraSources = [ "document_symbols" ];
 
@@ -21,11 +26,17 @@
     # avoid git dependency
     gitPackage = null;
 
-    defaultComponentConfigs.icon = lib.mkIf ascii {
-      folderClosed = "▸";
-      folderOpen = "▾";
-      folderEmpty = "▸";
-      folderEmptyOpen = "▾";
+    defaultComponentConfigs = {
+      icon = lib.mkIf ascii {
+        folderClosed = "▸";
+        folderOpen = "▾";
+        folderEmpty = "▸";
+        folderEmptyOpen = "▾";
+      };
+    };
+
+    extraOptions = {
+      default_component_configs.symlink_target.enabled = true;
     };
   };
 
