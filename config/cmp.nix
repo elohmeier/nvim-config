@@ -6,9 +6,9 @@
     cmp-buffer = {
       enable = true;
     };
-    # copilot-cmp = {
-    #   enable = true;
-    # }; # copilot suggestions
+    copilot-cmp = {
+      enable = true;
+    }; # copilot suggestions
     cmp-path = {
       enable = true;
     }; # file system paths

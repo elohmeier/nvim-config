@@ -3,14 +3,18 @@
     enable = true;
 
     settings = {
-      provider = "claude";
-      auto_suggestions_provider = "claude";
+      # provider = "claude";
+      # auto_suggestions_provider = "claude";
       claude = {
         endpoint = "https://api.anthropic.com";
         model = "claude-3-5-sonnet-20240620";
         temperature = 0;
         max_tokens = 4096;
       };
+
+      provider = "copilot";
+      auto_suggestions_provider = "copilot";
+
       behaviour = {
         auto_suggestions = false;
         auto_set_highlight_group = true;

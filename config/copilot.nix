@@ -1,4 +1,8 @@
 {
+  plugins.copilot-chat = {
+    enable = true;
+  };
+
   plugins.copilot-lua = {
     enable = true;
 

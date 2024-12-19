@@ -50,9 +50,9 @@
         [ ]
       else
         [
-          # ./copilot.nix
           ./aider.nix
           ./avante.nix
+          ./copilot.nix
           ./dap.nix
           ./jupytext.nix
           ./parrot.nix
