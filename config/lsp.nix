@@ -54,10 +54,10 @@
         enable = true;
         package = lib.mkIf minimal null;
       };
-      tailwindcss = {
-        enable = true;
-        package = lib.mkIf minimal null;
-      };
+      # tailwindcss = {
+      #   enable = true;
+      #   package = lib.mkIf minimal null;
+      # };
       ts_ls = {
         enable = true;
         package = lib.mkIf minimal null;
