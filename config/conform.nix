@@ -45,9 +45,11 @@
             }
             return {
               "fmt",
-              "-",
               "--ext",
               extensions[vim.bo[ctx.buf].filetype],
+              "--indent-width",
+              "4", -- match tabstop from ./set.nix
+              "-",
             }
           end
         '';
