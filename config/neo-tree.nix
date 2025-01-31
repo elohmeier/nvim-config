@@ -4,10 +4,10 @@
   plugins.neo-tree = {
     enable = true;
 
-    package = pkgs.vimPlugins.neo-tree-nvim.overrideAttrs (_: {
-      # https://github.com/nvim-neo-tree/neo-tree.nvim/pull/1609
-      patches = [ ./neo-tree-relative-symlinks.patch ];
-    });
+    # package = pkgs.vimPlugins.neo-tree-nvim.overrideAttrs (_: {
+    #   # https://github.com/nvim-neo-tree/neo-tree.nvim/pull/1609
+    #   patches = [ ./neo-tree-relative-symlinks.patch ];
+    # });
 
     extraSources = [ "document_symbols" ];
 
