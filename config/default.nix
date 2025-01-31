@@ -11,7 +11,7 @@
       (import ./mini.nix { inherit ascii; })
       (import ./molten.nix { inherit minimal; })
       (import ./neo-tree.nix { inherit ascii; })
-      ./attempt.nix
+      # ./attempt.nix
       ./cmp.nix
       ./colors.nix
       ./fzf-lua.nix
