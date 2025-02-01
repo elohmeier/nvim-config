@@ -50,14 +50,14 @@
         [ ]
       else
         [
-          ./aider.nix
-          ./avante.nix
+          # ./aider.nix
+          # ./avante.nix
           # ./copilot.nix
           ./dap.nix
           ./jupytext.nix
-          ./parrot.nix
+          # ./parrot.nix
           ./plantuml.nix
-          ./wezterm.nix
+          # ./wezterm.nix
         ]
     );
 
