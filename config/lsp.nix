@@ -5,6 +5,10 @@
     enable = true;
 
     servers = {
+      basedpyright = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
       bashls = {
         enable = true;
         package = lib.mkIf minimal null;
@@ -35,10 +39,6 @@
 
         # workaround https://github.com/Myriad-Dreamin/tinymist/issues/638
         extraOptions.offset_encoding = "utf-8";
-      };
-      pyright = {
-        enable = true;
-        package = lib.mkIf minimal null;
       };
       ruff_lsp = {
         enable = true;
