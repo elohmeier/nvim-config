@@ -8,6 +8,12 @@
       basedpyright = {
         enable = true;
         package = lib.mkIf minimal null;
+
+        settings = {
+          basedpyright = {
+            typeCheckingMode = "standard";
+          };
+        };
       };
       bashls = {
         enable = true;
