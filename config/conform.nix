@@ -7,9 +7,12 @@
     settings = {
       formatters_by_ft = {
         cpp = [ "clang-format" ];
+        css = [ "dprint" ];
         hcl = [ "packer_fmt" ];
+        html = [ "dprint" ];
         htmldjango = [ "djade" ];
-        json = [ "deno_fmt" ];
+        javascript = [ "dprint" ];
+        json = [ "dprint" ];
         jsonnet = [ "jsonnetfmt" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
@@ -17,43 +20,18 @@
           "ruff_format"
           "ruff_fix"
         ];
-        svelte = [ "deno_fmt" ];
+        svelte = [ "dprint" ];
         toml = [ "taplo" ];
-        typescript = [ "deno_fmt" ];
+        typescript = [ "dprint" ];
         typst = [ "typstyle" ];
         xml = [ "xmllint" ];
-        yaml = [ "deno_fmt" ];
+        yaml = [ "dprint" ];
 
         # run on filetypes that don't have other formatters configured
         "_" = [ "trim_whitespace" ];
       };
 
       formatters = {
-        deno_fmt.args.__raw = ''
-          function(self, ctx)
-            local extensions = {
-              esmodule = "mjs",
-              javascript = "js",
-              javascriptreact = "jsx",
-              json = "json",
-              jsonc = "jsonc",
-              markdown = "md",
-              svelte = "svelte",
-              typescript = "ts",
-              typescriptreact = "tsx",
-              yaml = "yaml",
-            }
-            return {
-              "fmt",
-              "--ext",
-              extensions[vim.bo[ctx.buf].filetype],
-              "--indent-width",
-              "4", -- match tabstop from ./set.nix
-              "-",
-            }
-          end
-        '';
-
         djade = {
           meta = {
             url = "https://github.com/adamchainz/djade";
@@ -92,7 +70,7 @@
   extraPackages =
     with pkgs;
     lib.mkIf (!minimal) [
-      deno
+      dprint
       go-jsonnet
       libxml2 # for xmllint
       nixfmt-rfc-style
