@@ -10,35 +10,35 @@
       {
         nixvim-full = nixvim'.makeNixvimWithModule {
           pkgs = final;
-          module = import ../../config { };
+          module = import ../config { };
         };
 
         nixvim-full-aw = nixvim'.makeNixvimWithModule {
           pkgs = final;
-          module = import ../../config { aw = true; };
+          module = import ../config { aw = true; };
         };
 
         nixvim-minimal = nixvim'.makeNixvimWithModule {
           pkgs = final;
-          module = import ../../config { minimal = true; };
+          module = import ../config { minimal = true; };
         };
 
         nixvim-minimal-ascii = nixvim'.makeNixvimWithModule {
           pkgs = final;
-          module = import ../../config {
+          module = import ../config {
             minimal = true;
             ascii = true;
           };
         };
 
-        aider-nvim = final.callPackage ../../packages/aider-nvim { };
-        attempt-nvim = final.callPackage ../../packages/attempt-nvim { };
-        lua-scripts = final.callPackage ../../packages/lua-scripts { };
-        parrot-nvim = final.callPackage ../../packages/parrot-nvim { };
-        resession-nvim = final.callPackage ../../packages/resession-nvim { };
-        ssr-nvim = final.callPackage ../../packages/ssr-nvim { };
-        telescope-luasnip-nvim = final.callPackage ../../packages/telescope-luasnip-nvim { };
-        wezterm-nvim = final.callPackage ../../packages/wezterm-nvim { };
+        aider-nvim = final.callPackage ../packages/aider-nvim { };
+        attempt-nvim = final.callPackage ../packages/attempt-nvim { };
+        lua-scripts = final.callPackage ../packages/lua-scripts { };
+        parrot-nvim = final.callPackage ../packages/parrot-nvim { };
+        resession-nvim = final.callPackage ../packages/resession-nvim { };
+        ssr-nvim = final.callPackage ../packages/ssr-nvim { };
+        telescope-luasnip-nvim = final.callPackage ../packages/telescope-luasnip-nvim { };
+        wezterm-nvim = final.callPackage ../packages/wezterm-nvim { };
       };
   };
 

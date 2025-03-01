@@ -1,10 +1,14 @@
 { inputs, ... }:
-
 {
+  imports = [
+    ./devshell.nix
+    inputs.git-hooks.flakeModule
+    inputs.treefmt-nix.flakeModule
+  ];
+
   perSystem =
     {
       config,
-      lib,
       pkgs,
       system,
       ...
