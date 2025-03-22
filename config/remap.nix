@@ -52,6 +52,16 @@
       action = "<nop>";
     }
 
+    # Map :W to :w (common typo)
+    {
+      mode = "c";
+      key = "W";
+      action = "w";
+      options = {
+        noremap = true;
+      };
+    }
+
     # Option + Shift + w to insert „ (like in macOS)
     {
       mode = "i";
