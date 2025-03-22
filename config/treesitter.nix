@@ -30,6 +30,7 @@
       rust
       ssh-config
       svelte
+      terraform
       toml
       typescript
       typst

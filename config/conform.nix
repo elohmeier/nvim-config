@@ -21,6 +21,7 @@
           "ruff_fix"
         ];
         svelte = [ "dprint" ];
+        terraform = [ "tofu_fmt" ];
         toml = [ "taplo" ];
         typescript = [ "dprint" ];
         typst = [ "typstyle" ];

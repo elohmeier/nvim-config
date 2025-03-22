@@ -64,6 +64,10 @@
       #   enable = true;
       #   package = lib.mkIf minimal null;
       # };
+      terraformls = {
+        enable = true;
+        package = lib.mkIf minimal null;
+      };
       ts_ls = {
         enable = true;
         package = lib.mkIf minimal null;
